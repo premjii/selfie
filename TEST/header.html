@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+#Home {background-color:red;}
+#Camera {background-color:green;}
+#Your-Selfie {background-color:blue;}
+#Menu {background-color:orange;}
+</style>
+</head>
+<body>
+
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <h2>Welcome !!</h2>
+</div>
+
+<div id="Camera" class="tabcontent">
+  <h3>Camera</h3>
+  <h4>Post Your pics</h4> 
+</div>
+
+<div id="Your-Selfie" class="tabcontent">
+  <h3>Your Selfie's</h3>
+  
+</div>
+
+<div id="Menu" class="tabcontent">
+  <h3>Menu</h3>
+  <p>Settings</p>
+</div>
+
+<button class="tablink" onclick="openCity('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openCity('Camera', this, 'green')">Camera</button>
+<button class="tablink" onclick="openCity('Your-Selfie', this, 'blue')">Your-Selfie</button>
+<button class="tablink" onclick="openCity('Menu', this, 'orange')">Menu</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(cityName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 
