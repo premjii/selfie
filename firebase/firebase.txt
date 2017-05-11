@@ -1,0 +1,14 @@
+
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDyOrqby1Wzr0w-qigW2a-o-VFAMyGaS3w",
+    authDomain: "selfie-6796d.firebaseapp.com",
+    databaseURL: "https://selfie-6796d.firebaseio.com",
+    projectId: "selfie-6796d",
+    storageBucket: "selfie-6796d.appspot.com",
+    messagingSenderId: "1004028658888"
+  };
+  firebase.initializeApp(config);
+</script>
